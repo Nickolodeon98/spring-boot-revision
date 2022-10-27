@@ -1,15 +1,12 @@
 package com.example.revision.controller;
 
 import com.example.revision.domain.dto.MemberDto;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v2/post-api")
+@RequestMapping(value="/api/v2/post-api", method= RequestMethod.POST)
 public class PostController {
     /* URL 이 아니라 Request body 에서 parameter 를 서버로 전달하는 POST 방식 */
     @PostMapping("/hello")
