@@ -39,10 +39,10 @@ public class UserController {
     }
 
     @GetMapping("/selection/{id}")
-    public String findUser(@PathVariable String id) {
+    public ResponseEntity<User> findUser(@PathVariable String id) {
         log.info("User 테이블 내의 항목을 검색합니다.");
         User user = userDao.findById(id);
-        return user.toString();
+        return ResponseEntity.ok().body(user);
     }
 
 }
