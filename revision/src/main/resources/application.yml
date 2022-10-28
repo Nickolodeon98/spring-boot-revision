@@ -3,6 +3,11 @@ spring:
     pathmatch:
       matching-strategy:
         ant_path_matcher
+  datasource:
+    driverClassName : com.mysql.cj.jdbc.Driver.class
+    url: jdbc:mysql://localhost:8080/likelion-db
+    username: root
+    password: 1234
 
 logging:
   level:
