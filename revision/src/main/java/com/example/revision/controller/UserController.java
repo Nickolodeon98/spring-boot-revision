@@ -28,7 +28,7 @@ public class UserController {
 
     @DeleteMapping("/blank/{toDelete}")
     public void deleteSelectedUser(@PathVariable("toDelete") String userId) {
-        log.info("User 를 데이터베이스에서 삭제합니다.");
+        log.info("ID가 {}인 항목을 데이터베이스에서 삭제합니다.", userId);
         userDao.deleteUser(userId);
     }
 
