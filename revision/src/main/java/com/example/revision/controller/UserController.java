@@ -18,7 +18,14 @@ public class UserController {
         userDao.add(user);
     }
 
-//    @DeleteMapping()
+    @DeleteMapping("/blank/{toDelete}")
+    public void deleteSelectedUser(@PathVariable("toDelete") String userId) {
+        userDao.deleteUser(userId);
+    }
 
+    @DeleteMapping("/all-blank")
+    public void deleteAllUsers() {
+        userDao.deleteAll();
+    }
 
 }

@@ -17,6 +17,10 @@ public class UserDao {
         this.jdbcTemplate.update("DELETE FROM users");
     }
 
+    public void deleteUser(String id) {
+        this.jdbcTemplate.update("DELETE FROM users WHERE id = ?", id);
+    }
+
     public void add(UserDto user) {
         this.jdbcTemplate.update("INSERT INTO users VALUES (?, ?, ?)", user.getId(), user.getName(), user.getPassword());
     }
