@@ -1,6 +1,6 @@
 package com.example.revision.domain.dto;
 
-public class UserDto {
+public class UserDto { // 컨트롤러에서 RequestBody 로 클라이언트로부터 정보를 받을 때 사용되는 Data Transfer Object
 
     private String id;
     private String name;
